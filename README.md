@@ -14,26 +14,22 @@ Missing SRI exposes websites to supply chain attacks, where compromised third-pa
 🛠️ How It Works
 
 The tool:
+
 Fetches a webpage
 Parses HTML using BeautifulSoup
 Identifies external resources
 Checks for missing integrity attributes
 Reports vulnerable assets
-
 📦 Installation
 pip install requests beautifulsoup4 urllib3
-
 ▶️ Usage
-Add domains to domains.txt:
+1. Add domains to domains.txt
 example.com
 google.com
-
-Run the scanner:
+2. Run the scanner
 python sri_scanner.py
-
-Output:
+3. Output
 sri_results.json
-
 📊 Example Output
 {
   "domain": "https://example.com",
@@ -52,14 +48,12 @@ Without SRI:
 Third-party CDN compromise = full site compromise
 No integrity validation on loaded scripts
 Increased risk of Magecart-style attacks
-
 🚧 Future Improvements
 Multithreading for faster scanning
 HTTP → HTTPS downgrade detection
 Security headers analysis
 CSV/HTML reporting
 Integration with SecurityScorecard-style scoring
-
 📜 License
 
 MIT License
